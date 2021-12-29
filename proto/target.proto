@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package test;
+
+import "validator/validator.proto";
+
+message Request {
+    uint64 id    = 1 [(validator.field) = {int_gt: 0, int_lt: 100}];
+}

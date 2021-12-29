@@ -1,0 +1,15 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/jbendotnet/mwitkow-go-proto-validators/gen/proto/go
+plugins:
+  - name: go
+    out: gen/proto/go
+    opt:
+      - paths=source_relative
+  - name: govalidators
+    out: gen/proto/go
+    opt:
+      - paths=source_relative
+      - lang=go
